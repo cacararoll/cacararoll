@@ -1,60 +1,77 @@
-body {
-    color: white;
-    background: black;
-    margin: 0px;
-    font-family: "Chakra Petch", sans-serif;
-    margin-bottom: 100px;
-}
+@@ -193,6 +193,20 @@ <h2 class="tópicos__titulo">TÓPICOS VISITADOS RECENTEMENTE</h2>
+    </ul>
+  </section>
 
-header {
-    border-bottom: solid 2px rgb(42, 122, 228);
-    padding: 20px;
-    font-size: 32px;
-    color: rgb(42, 122, 228);
-}
+  <section class="contato">
+    <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
+    <p class="contato__texto">
+      Atualizações de e-books, novos livros, promoções e outros.
+    </p>
+    <input type="email" placeholder="Cadastre seu e-mail" class="contato__email" />
+  </section>
+  <hr />
+  <footer class="rodapé">
+    <h2 class="rodapé__titulo">Grupo Alura</h2>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+‎styles.css
++2
+Original file line number	Diff line number	Diff line change
+@@ -2,6 +2,8 @@
+@import url("styles/banner.css");
+@import url("styles/carrossel.css");
+@import url("styles/topicos.css");
+@import url("styles/contato.css");
+@import url("styles/rodapé.css");
 
-.chamada {
-    background: rgb(184, 156, 213);
-    padding-bottom: 80px;
-    padding-top: 80px;
-    display: flex;
-    justify-content: center;
+:root {
+    --cor-de-fundo: #EBECEE;
+‎styles/contato.css
++37
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,37 @@
+.contato {
+    background-color: var(--branco);
+    padding: 1em;
 }
-
-.chamada-texto {
-    margin-right: 5%;
+.contato__titulo,
+.contato__texto {
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
-
-h1 {
-    font-size: 40px;
+.contato__titulo {
+    font-size: 18px;
+    font-weight: 500;
 }
-
-p {
-    font-size: 20px;
+.contato__texto {
+    font-weight: 300;
+    margin: 1em 0;
 }
-
-.categoria-videos {
-    display: flex;
-    overflow-x: auto;
-    gap: 10px;
+.contato__email {
+    padding: 1em;
+    border: 1px solid var(--azul);
+    border-radius: 24px;
+    width: 90%;
+    color: var(--azul);
 }
-
-.categoria {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 50px;
+.contato__email::placeholder {
+    font-family: var(--fonte-principal);
+    color: var(--azul);
+    background: url("../img/Email.svg") no-repeat;
+    padding-left: 2em;
 }
-
-.categoria-videos img {
-    opacity: 0.5;
-    height: 200px;
+‎styles/rodapé.css
++8
+Original file line number	Diff line number	Diff line change
+@@ -0,0 +1,8 @@
+hr {
+    margin: 0;
 }
-
-.categoria-videos img:hover {
-    opacity: 1.0;
-    border: 3px solid green;
-}
-
-.categoria h2 {
-    color: rgb(42, 122, 228);
+.rodapé {
+    background-color: var(--branco);
+    padding: 1em;
 }
